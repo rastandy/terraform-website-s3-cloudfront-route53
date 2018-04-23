@@ -108,12 +108,7 @@ resource "aws_cloudfront_distribution" "website_cdn" {
 
   default_root_object = "index.html"
 
-  custom_error_response {
-    error_code            = "404"
-    error_caching_min_ttl = "360"
-    response_code         = "200"
-    response_page_path    = "${var.not-found-response-path}"
-  }
+  custom_error_response = ["${var.custom_error_response}"]
 
   "default_cache_behavior" {
     allowed_methods = ["GET", "HEAD", "DELETE", "OPTIONS", "PATCH", "POST", "PUT"]

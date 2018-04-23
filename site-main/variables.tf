@@ -47,3 +47,8 @@ variable "price_class" {
   description = "CloudFront price class"
   default     = "PriceClass_200"
 }
+
+variable "viewer_protocol_policy" {
+  description = "CloudFront viewer protocol policy"
+  default     = "redirect-to-https"
+}

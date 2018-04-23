@@ -131,7 +131,7 @@ resource "aws_cloudfront_distribution" "website_cdn" {
     target_origin_id = "origin-bucket-${aws_s3_bucket.website_bucket.id}"
 
     // This redirects any HTTP request to HTTPS. Security first!
-    viewer_protocol_policy = "redirect-to-https"
+    viewer_protocol_policy = "${var.viewer_protocol_policy}"
     compress               = true
   }
 

@@ -10,7 +10,7 @@ variable environment {
 }
 
 variable domains {
-  type = "map"
+  type = "list"
 }
 
 variable target {}

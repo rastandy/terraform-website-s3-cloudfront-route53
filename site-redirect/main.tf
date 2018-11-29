@@ -147,7 +147,7 @@ resource "aws_cloudfront_distribution" "website_cdn" {
     minimum_protocol_version = "TLSv1"
   }
 
-  aliases = ["${var.domain}"]
+  aliases = "${var.domains}"
 
   tags = "${merge("${var.tags}",map("Name", "${var.project}-${var.environment}-${replace("${var.domain}","*","star")}", "Environment", "${var.environment}", "Project", "${var.project}"))}"
 

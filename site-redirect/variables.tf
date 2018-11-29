@@ -9,7 +9,10 @@ variable environment {
   default = "default"
 }
 
-variable domain {}
+variable domains {
+  type = "map"
+}
+
 variable target {}
 variable duplicate-content-penalty-secret {}
 variable deployer {}

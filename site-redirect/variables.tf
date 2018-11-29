@@ -30,3 +30,8 @@ variable "viewer_protocol_policy" {
   description = "CloudFront viewer protocol policy"
   default     = "redirect-to-https"
 }
+
+variable "default_root_object" {
+  description = "CloudFront default root object"
+  default     = "index.html"
+}

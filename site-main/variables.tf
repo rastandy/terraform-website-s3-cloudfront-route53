@@ -51,6 +51,11 @@ variable "forward-query-string" {
   default     = false
 }
 
+variable "forwarded-headers" {
+  description = "Forwarded headers"
+  default     = []
+}
+
 variable "price_class" {
   description = "CloudFront price class"
   default     = "PriceClass_200"

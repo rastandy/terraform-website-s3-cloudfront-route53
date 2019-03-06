@@ -47,6 +47,8 @@ resource "aws_s3_bucket" "website_bucket" {
     routing_rules  = "${var.routing_rules}"
   }
 
+  cors_rule = "${var.cors_rule}"
+
   //  logging {
   //    target_bucket = "${var.log_bucket}"
   //    target_prefix = "${var.log_bucket_prefix}"

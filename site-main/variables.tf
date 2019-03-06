@@ -15,6 +15,12 @@ variable bucket_name {
   description = "The name of the S3 bucket to create."
 }
 
+variable "cors_rule" {
+  description = "CORS configuration for the S3 bucket"
+  type    = "list"
+  default     = []
+}
+
 variable duplicate-content-penalty-secret {}
 variable deployer {}
 variable acm-certificate-arn {}

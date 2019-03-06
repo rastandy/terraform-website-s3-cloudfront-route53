@@ -15,6 +15,8 @@ variable bucket_name {
   description = "The name of the S3 bucket to create."
 }
 
+# This is a HACK
+# Check this article: https://medium.com/@brikis98/its-still-a-todo-with-terraform-see-https-github-com-hashicorp-terraform-issues-14037-ac6944378a8b
 variable "cors_rule" {
   description = "CORS configuration for the S3 bucket"
   type    = "list"
